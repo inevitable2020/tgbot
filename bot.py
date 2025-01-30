@@ -3,9 +3,9 @@ import requests
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-# Load API keys from Railway environment
-API_KEY = os.getenv("120b6f95344f65f89b96a963db43e83a03e3d6de05e19b8cf23ee8c1aa64e893")
-BOT_TOKEN = os.getenv("7869390750:AAFikWKtt8EryptP9NUyRFDXvXbTd2sEM9g")
+# Load API keys from Railway environment variables
+API_KEY = os.getenv("VIRUSTOTAL_API_KEY")  # VirusTotal API Key
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")  # Telegram Bot Token
 
 def start(update: Update, context: CallbackContext):
     update.message.reply_text("Send me a file or link to scan.")
